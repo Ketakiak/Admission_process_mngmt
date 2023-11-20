@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Student Information</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Department ID</th>
+                <th>Department Name</th>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Fees</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row['std_id'] }}</td>
+                    <td>{{ row['std_name'] }}</td>
+                    <td>{{ row['dept_id'] }}</td>
+                    <td>{{ row['dept_name'] }}</td>
+                    <td>{{ row['cid'] }}</td>
+                    <td>{{ row['cname'] }}</td>
+                    <td>{{ row['username'] }}</td>
+                    <td>{{ row['email'] }}</td>
+                    <td>{{ row['psw'] }}</td>
+                    <td>{{ row['fees'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
